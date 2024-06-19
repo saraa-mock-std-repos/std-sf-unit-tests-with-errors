@@ -7,7 +7,7 @@ class Product
     private int $id;
     private \DateTimeImmutable $createdAt;
     private string $nom;
-    private int $quantite;
+    private string $quantite;
     private string $description;
 
     public function __construct()
@@ -51,15 +51,15 @@ class Product
     /**
      * @return int
      */
-    public function getQuantite(): int
+    public function getQuantite(): string
     {
         return $this->quantite;
     }
 
     /**
-     * @param int $quantite
+     * @param string $quantite
      */
-    public function setQuantite(int $quantite): void
+    public function setQuantite(string $quantite): void
     {
         $this->quantite = $quantite;
     }
