@@ -7,8 +7,8 @@ class Product
     private int $id;
     private \DateTimeImmutable $createdAt;
     private string $nom;
-    private string $quantite;
-    private string $description;
+    private int $quantite;
+    private int $description;
 
     public function __construct()
     {
@@ -16,68 +16,56 @@ class Product
         $this->createdAt = new \DateTimeImmutable('now', new \DateTimeZone('Europe/Paris'));
     }
 
-    /**
-     * @return int
-     */
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @return \DateTimeImmutable
-     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
     public function getCreatedAt(): \DateTimeImmutable
     {
         return $this->createdAt;
     }
 
-    /**
-     * @return string
-     */
+    public function setCreatedAt(\DateTimeImmutable $createdAt): void
+    {
+        $this->createdAt = $createdAt;
+    }
+
     public function getNom(): string
     {
         return $this->nom;
     }
 
-    /**
-     * @param string $nom
-     */
     public function setNom(string $nom): void
     {
         $this->nom = $nom;
     }
 
-    /**
-     * @return int
-     */
-    public function getQuantite(): string
+    public function getQuantite(): int
     {
         return $this->quantite;
     }
 
-    /**
-     * @param string $quantite
-     */
-    public function setQuantite(string $quantite): void
+    public function setQuantite(int $quantite): void
     {
         $this->quantite = $quantite;
     }
 
-    /**
-     * @return string
-     */
-    public function getDescription(): string
+    public function getDescription(): int
     {
         return $this->description;
     }
 
-    /**
-     * @param string $description
-     */
-    public function setDescription(string $description): void
+    public function setDescription(int $description): void
     {
         $this->description = $description;
     }
+
+
 
 }
